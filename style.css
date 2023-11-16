@@ -81,18 +81,70 @@ body{
   gap: 35px;
 }
 
+.ri-arrow-right-s-line{
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+}
+
 .menu__list-link{
   text-transform: uppercase;
   font-weight: 700;
-
+  position: relative;
 }
 
-.menu__list-link:hover{
-  text-decoration: underline;
+.menu__list-link::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: aliceblue;
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  transition: width .3s;
+}
+
+.menu__list-link:hover::after{
+  width: 30%;
+}
+
+.drop-menu__list-item{
+  padding: 5px;
+}
+
+.drop-menu__list-link{
+  position: relative;
+}
+
+.drop-menu__list-link::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: aliceblue;
+  position: absolute;
+  left: 0;
+  bottom: -0.3rem;
+  transition: width .3s;
+}
+
+.drop-menu__list-link:hover::after{
+  width: 25%;
 }
 
 .menu__list-link--active{
   color: #0066FF;
+}
+
+.drop-menu__list{
+  display: none;
+  position:absolute;
+	top: auto;
+	left: 62%;
+	padding:0
+}
+
+#menu ul li:hover > ul{
+  display: block;
 }
 
 
@@ -564,6 +616,9 @@ body{
   .tabs__content-item{
     grid-template-columns: repeat(3,1fr);
   }
+  .drop-menu__list{
+    left: 53%;
+  }
 
 }
 @media (max-width: 1040px) {
@@ -602,6 +657,10 @@ body{
   .menu__list.menu__list--active{
     transform: translateY(0%);
   }
+  .drop-menu__list{
+    top: 27%;
+    left: 56%;
+  }
   .why-we__list{
     grid-template-columns: repeat(2,1fr);
     gap: 20px;
@@ -626,6 +685,9 @@ body{
     font-size: 25px;
     max-width: 295px;
   }
+  .drop-menu__list{
+    left: 57%;
+  }
   .swiper-pagination-bullet{
     width: 60px;
   }
@@ -647,6 +709,9 @@ body{
   }
   .tabs__btn-item{
     font-size: 18px;
+  }
+  .drop-menu__list{
+    left: 58%;
   }
   .blog__items{
     grid-template-columns: repeat(1, 1fr);
@@ -670,6 +735,9 @@ body{
   .how-do__item{
     padding-left: 225px;
   }
+  .drop-menu__list{
+    left: 60%;
+  }
 }
 
 @media (max-width: 540px) {
@@ -681,6 +749,9 @@ body{
   }
   .swiper-pagination-bullet{
     width: 35px;
+  }
+  .drop-menu__list{
+    left: 60%;
   }
   .why-we__list{
     grid-template-columns: repeat(1,1fr);

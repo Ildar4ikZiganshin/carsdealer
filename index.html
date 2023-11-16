@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CarWow - Best cars dealer.</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="img/car1.png" type="image/logo">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="style.css">
@@ -25,7 +25,7 @@
             <img src="img/white-logo.png" class="logo__img">
           </a>
 
-          <nav class="menu">
+          <nav id="menu" class="menu">
             <button class="menu__btn">
               <span></span>
               <span></span>
@@ -34,6 +34,21 @@
             <ul class="menu__list">
               <li class="menu__list-item">
                 <a href="new-cars.html" class="menu__list-link">NEW CARS</a>
+                <i class="ri-arrow-right-s-line"></i>
+                <ul class="drop-menu__list">
+                  <li class="drop-menu__list-item">
+                    <a class="drop-menu__list-link" href="new-cars.html">Sedans and Minivans</a>
+                  </li>
+                  <li class="drop-menu__list-item">
+                    <a class="drop-menu__list-link" href="new-cars.html">Trucks</a>
+                  </li>
+                  <li class="drop-menu__list-item">
+                    <a class="drop-menu__list-link" href="new-cars.html">Crossovers</a>
+                  </li>
+                  <li class="drop-menu__list-item">
+                    <a class="drop-menu__list-link" href="new-cars.html">Electric cars</a>
+                  </li>
+                </ul>
               </li>
               <li class="menu__list-item">
                 <a href="#section-important" class="menu__list-link">SERVICES</a>
